@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authority
+  labels:
+    app: authority
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authority
+  template:
+    metadata:
+      labels:
+        app: authority
+    spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+      containers:
+        - name: authority-container
+          image: 5minds/processcube_authority:3.0.4
+          ports:
+            - containerPort: 11560
+          env:
+            - name: CONFIG_PATH
+              value: /etc/authority/config/config.json
+          resources:
+            limits:
+              memory: "1Gi"
+              cpu: "1"
+            requests:
+              memory: "1Gi"
+              cpu: "1"
+          volumeMounts:
+            - name: config
+              mountPath: /etc/authority/config/config.json
+              subPath: config.json
+      volumes:
+        - name: config
+          configMap:
+            name: authority-config

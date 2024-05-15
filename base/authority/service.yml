@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: authority
+  labels:
+    app: authority
+spec:
+  ports:
+    - port: 11560
+      protocol: TCP
+      targetPort: 11560
+  selector:
+    app: authority

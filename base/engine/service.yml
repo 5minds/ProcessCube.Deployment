@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: engine
+  labels:
+    app: engine
+spec:
+  ports:
+    - port: 10560
+      protocol: TCP
+      targetPort: 10560
+  selector:
+    app: engine

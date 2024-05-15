@@ -1,0 +1,48 @@
+{
+    "issuerUrl": "https://authority.dev.5minds.cloud",
+    "applicationPort": 11560,
+    "development": false,
+    "studio": true,
+    "engines": [
+      {
+        "clientId": "atlas_engine",
+        "clientSecret": "atlas_engine"
+      }
+    ],
+    "externalTaskWorkers": [
+      {
+        "clientId": "external_task_worker",
+        "clientSecret": "external_task_worker_secret"
+      }
+    ],
+    "otherClients": [
+        {
+            "clientId": "symrise_paperless-order-manufacturing_poc",
+            "clientSecret": "symrise_paperless-order-manufacturing_poc",
+            "scope": "openid profile email engine_read engine_write",
+            "grant_types": ["authorization_code", "refresh_token"],
+            "response_types": ["code"],
+            "redirect_uris": ["https://app.dev.5minds.cloud"]
+        }
+    ],
+    "database": {
+      "dialect": "postgres",
+      "host": "postgres",
+      "port": 5432,
+      "database": "authority",
+      "username": "postgres",
+      "password": "test123!",
+      "logging": false
+    },
+    "extensions": {
+      "path": "/app/extensions",
+      "configs": {
+        "username_password": {
+          "skipConsentPageForClientIds": ["upe_client", "portal", "atlas_studio"],
+          "customization": {
+            "title": "5Minds Authority"
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: engine
+  labels:
+    app: engine
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: engine
+  template:
+    metadata:
+      labels:
+        app: engine
+    spec:
+      containers:
+        - name: engine-container
+          image: 5minds/processcube_engine:17.0.0
+          ports:
+            - containerPort: 10560
+          env:
+            - name: application__name
+              value: "5Minds Engine"
+            - name: database__dialect
+              value: postgres
+            - name: database__host
+              value: postgres
+            - name: database__port
+              value: "5432"
+            - name: database__database
+              value: engine
+            - name: database__username
+              value: postgres
+            - name: database__password
+              value: test123!
+            - name: iam__baseUrl
+              value: "https://authority.dev.5minds.cloud"
+            - name: httpServer__port
+              value: "10560"
+            - name: NODE_OPTIONS
+              value: "--max-old-space-size=4096"
+
+          resources:
+            limits:
+              memory: "8Gi"
+              cpu: "4"
+            requests:
+              memory: "4Gi"
+              cpu: "2"
