@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: processcube-demo-app
 
 resources:
-  - ../base/
+  - git::https://github.com/5minds/ProcessCube.Deployment//base/?ref=main
 
 patches:
   - target:
