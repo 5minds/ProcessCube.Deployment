@@ -5,6 +5,7 @@ namespace: processcube-demo-app
 
 resources:
   - git::https://github.com/5minds/ProcessCube.Deployment//base/?ref=main
+  - namespace.yaml
 
 patches:
   - target:
@@ -13,7 +14,17 @@ patches:
       name: authority
     path: ./patches/authority/ingress-patch.yml
   - target:
+      group: apps
+      kind: Deployment
+      name: engine
+    path: ./patches/engine/deployment-patch.yml
+  - target:
       group: networking.k8s.io
       kind: Ingress
       name: engine
     path: ./patches/engine/ingress-patch.yml
+  - target:
+      group: apps
+      kind: Deployment
+      name: postgres
+    path: ./patches/engine/deployment-patch.yml
