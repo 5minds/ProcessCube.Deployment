@@ -5,6 +5,3 @@ resources:
   - ingress.yml
   - service.yml
   - deployment.yml
-
-configMapGenerator:
-  - name: authority-config

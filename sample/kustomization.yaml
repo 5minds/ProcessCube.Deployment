@@ -22,5 +22,6 @@ patches:
 
 configMapGenerator:
   - name: authority-config
+    behavior: replace
     files:
       - ./authority/config.json
