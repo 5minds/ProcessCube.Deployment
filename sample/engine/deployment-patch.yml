@@ -1,0 +1,10 @@
+- op: add #action
+  path: "/spec/template/spec/containers/0/env/-" #resource we want to change
+  value: 
+    name: iam__baseUrl
+    value: "https://authority.sampleapp.dev.5minds.cloud" 
+- op: add #action
+  path: "/spec/template/spec/containers/0/env/-" #resource we want to change
+  value: 
+    name: application__name
+    value: "ichbindeinauto.de (dev)" 

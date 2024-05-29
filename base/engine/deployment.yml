@@ -22,8 +22,6 @@ spec:
           ports:
             - containerPort: 10560
           env:
-            - name: application__name
-              value: "5Minds Engine"
             - name: database__dialect
               value: postgres
             - name: database__host
@@ -36,8 +34,6 @@ spec:
               value: postgres
             - name: database__password
               value: test123!
-            - name: iam__baseUrl
-              value: "https://authority.dev.5minds.cloud"
             - name: httpServer__port
               value: "10560"
             - name: NODE_OPTIONS

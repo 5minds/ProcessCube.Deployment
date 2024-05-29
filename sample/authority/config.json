@@ -1,5 +1,5 @@
 {
-    "issuerUrl": "https://authority.sample.dev.5minds.cloud",
+    "issuerUrl": "https://authority.sampleapp.dev.5minds.cloud",
     "applicationPort": 11560,
     "development": false,
     "studio": true,

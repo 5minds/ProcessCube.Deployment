@@ -14,6 +14,11 @@ patches:
       name: engine
     path: ./engine/ingress-patch.yml
   - target:
+      group: apps
+      kind: Deployment
+      name: engine
+    path: ./engine/deployment-patch.yml
+  - target:
       group: networking.k8s.io
       kind: Ingress
       name: authority
