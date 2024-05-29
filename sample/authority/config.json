@@ -1,5 +1,5 @@
 {
-    "issuerUrl": "https://authority.dev.5minds.cloud",
+    "issuerUrl": "https://authority.sample.dev.5minds.cloud",
     "applicationPort": 11560,
     "development": false,
     "studio": true,
@@ -17,12 +17,12 @@
     ],
     "otherClients": [
         {
-            "clientId": "symrise_paperless-order-manufacturing_poc",
-            "clientSecret": "symrise_paperless-order-manufacturing_poc",
+            "clientId": "sampleapp",
+            "clientSecret": "sampleapp",
             "scope": "openid profile email engine_read engine_write",
             "grant_types": ["authorization_code", "refresh_token"],
             "response_types": ["code"],
-            "redirect_uris": ["https://app.dev.5minds.cloud"]
+            "redirect_uris": ["https://app.sample.dev.5minds.cloud"]
         }
     ],
     "database": {

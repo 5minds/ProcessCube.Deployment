@@ -28,13 +28,6 @@ spec:
           env:
             - name: CONFIG_PATH
               value: /etc/authority/config/config.json
-          resources:
-            limits:
-              memory: "1Gi"
-              cpu: "1"
-            requests:
-              memory: "1Gi"
-              cpu: "1"
           volumeMounts:
             - name: config
               mountPath: /etc/authority/config/config.json

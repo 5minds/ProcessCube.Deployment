@@ -42,11 +42,3 @@ spec:
               value: "10560"
             - name: NODE_OPTIONS
               value: "--max-old-space-size=4096"
-
-          resources:
-            limits:
-              memory: "8Gi"
-              cpu: "4"
-            requests:
-              memory: "4Gi"
-              cpu: "2"
