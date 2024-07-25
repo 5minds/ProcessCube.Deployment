@@ -31,11 +31,11 @@
           "grant_types": ["authorization_code", "refresh_token"],
           "response_types": ["code"],
           "redirect_uris": [
-            "https://nodered.dev.5minds.cloud/auth/strategy/callback",
-            "https://nodered.dev.5minds.cloud/auth/dashboard/callback"
+            "https://nodered.sampleapp.dev.5minds.cloud/auth/strategy/callback",
+            "https://nodered.sampleapp.dev.5minds.cloud/auth/dashboard/callback"
           ],
-          "post_logout_redirect_uris": ["https://nodered.dev.5minds.cloud"],
-          "corsOrigins": ["https://nodered.dev.5minds.cloud"]
+          "post_logout_redirect_uris": ["https://nodered.sampleapp.dev.5minds.cloud"],
+          "corsOrigins": ["https://nodered.sampleapp.dev.5minds.cloud"]
         }
     ],
     "database": {
