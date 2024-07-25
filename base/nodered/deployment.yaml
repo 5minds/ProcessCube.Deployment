@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodered
+  labels:
+    app: nodered
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodered
+  template:
+    metadata:
+      labels:
+        app: nodered
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: nodered
+          image: 5minds/processcube_nodered:0.6.0
+          ports:
+            - containerPort: 1880
+          volumeMounts:
+            - name: data
+              mountPath: "/data"
+          env:
+            - name: TZ
+              value: "Europe/Berlin"
+            - name: NODERED_CLIENT_ID
+              value: nodered
+            - name: NODERED_CLIENT_SECRET
+              value: 79C29A79-607D-452B-B4CA-AF79BF0D44E9
+      securityContext:
+        fsGroup: 1000
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: nodered-data
+      imagePullSecrets:
+        - name: regcred

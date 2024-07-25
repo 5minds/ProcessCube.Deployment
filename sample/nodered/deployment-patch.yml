@@ -1,10 +1,10 @@
 - op: add #action
   path: "/spec/template/spec/containers/0/env/-" #resource we want to change
   value: 
-    name: iam__baseUrl
+    name: NODERED_AUTHORITY_URL
     value: "https://authority.sampleapp.dev.5minds.cloud" 
 - op: add #action
   path: "/spec/template/spec/containers/0/env/-" #resource we want to change
   value: 
-    name: application__name
-    value: "sampleapp (dev)" 
+    name: NODERED_BASE_URL
+    value: "https://authority.sampleapp.dev.5minds.cloud" 
