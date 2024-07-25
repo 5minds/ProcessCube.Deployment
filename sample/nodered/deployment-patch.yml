@@ -7,4 +7,14 @@
   path: "/spec/template/spec/containers/0/env/-" #resource we want to change
   value: 
     name: NODERED_BASE_URL
-    value: "https://authority.sampleapp.dev.5minds.cloud" 
+    value: "https://nodered.sampleapp.dev.5minds.cloud" 
+- op: add #action
+  path: "/spec/template/spec/containers/0/env/-" #resource we want to change
+  value: 
+    name: NODERED_CLIENT_ID
+    value: "nodered" 
+- op: add #action
+  path: "/spec/template/spec/containers/0/env/-" #resource we want to change
+  value: 
+    name: NODERED_CLIENT_SECRET
+    value: "79C29A79-607D-452B-B4CA-AF79BF0D44E9"

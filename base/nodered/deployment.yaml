@@ -28,10 +28,6 @@ spec:
           env:
             - name: TZ
               value: "Europe/Berlin"
-            - name: NODERED_CLIENT_ID
-              value: nodered
-            - name: NODERED_CLIENT_SECRET
-              value: 79C29A79-607D-452B-B4CA-AF79BF0D44E9
       securityContext:
         fsGroup: 1000
       volumes:
