@@ -19,7 +19,7 @@ spec:
       restartPolicy: Always
       containers:
         - name: nodered
-          image: ghcr.io/5minds/processcube_nodered:0.6.1
+          image: ghcr.io/5minds/processcube_nodered:0.6.2
           ports:
             - containerPort: 1880
           volumeMounts:
