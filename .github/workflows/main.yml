@@ -15,7 +15,7 @@ env:
   # CI_TOOLS_BETA_NPM_TAG: next
   #BOX_RELEASE_TAG: 2024-1
 jobs:
-  build_docker:
+  build_version:
     runs-on: [ubuntu-latest]
 
     steps:
