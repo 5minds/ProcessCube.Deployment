@@ -27,12 +27,12 @@ patches:
       group: apps
       kind: Deployment
       name: nodered
-    path: ./nodered/deployment-patch.yml
+    path: ./lowcode/deployment-patch.yml
   - target:
       group: networking.k8s.io
       kind: Ingress
       name: nodered
-    path: ./nodered/ingress-patch.yml
+    path: ./lowcode/ingress-patch.yml
 
 
 configMapGenerator:
