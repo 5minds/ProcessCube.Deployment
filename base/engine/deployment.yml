@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: engine-container
-          image: 5minds/engine:17.0.2-extensions-0.28.0
+          image: 5minds/engine:17.1.1-extensions-1.0.0
           ports:
             - containerPort: 10560
           env:
