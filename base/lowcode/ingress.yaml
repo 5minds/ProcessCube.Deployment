@@ -19,4 +19,4 @@ spec:
               service:
                 name: nodered
                 port: 
-                  number: 1880
+                  number: 30000

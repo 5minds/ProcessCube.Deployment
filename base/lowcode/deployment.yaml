@@ -21,7 +21,7 @@ spec:
         - name: nodered
           image: ghcr.io/5minds/processcube_lowcode:2.0.0
           ports:
-            - containerPort: 1880
+            - containerPort: 30000
           volumeMounts:
             - name: data
               mountPath: "/data"
@@ -30,6 +30,8 @@ spec:
               value: "Europe/Berlin"
             - name: NODE_OPTIONS
               value: "--max-old-space-size=4096"
+            - name: NODERED_PORT
+              value: "30000"
       securityContext:
         fsGroup: 1000
       volumes:
