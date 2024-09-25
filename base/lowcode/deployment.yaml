@@ -19,7 +19,7 @@ spec:
       restartPolicy: Always
       containers:
         - name: nodered
-          image: ghcr.io/5minds/processcube_lowcode:1.4.1
+          image: ghcr.io/5minds/processcube_lowcode:1.4.2-hotfix-dd5e2c-m1hk33q2
           ports:
             - containerPort: 1880
           volumeMounts:
