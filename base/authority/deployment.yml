@@ -22,7 +22,7 @@ spec:
         fsGroup: 1000
       containers:
         - name: authority-container
-          image: 5minds/processcube_authority:3.0.4
+          image: 5minds/processcube_authority:3.1.2
           ports:
             - containerPort: 11560
           env:
