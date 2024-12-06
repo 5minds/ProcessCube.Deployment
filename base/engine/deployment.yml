@@ -22,6 +22,8 @@ spec:
           ports:
             - containerPort: 10560
           env:
+            - name: TZ
+              value: Europe/Berlin
             - name: database__dialect
               value: postgres
             - name: database__host
