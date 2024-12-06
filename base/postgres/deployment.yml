@@ -27,6 +27,8 @@ spec:
             - mountPath: /dev/shm
               name: cache-volume
           env:
+            - name: TZ
+              value: Europe/Berlin
             - name: POSTGRES_PASSWORD
               value: test123!
             - name: PGDATA

@@ -26,6 +26,8 @@ spec:
           ports:
             - containerPort: 11560
           env:
+            - name: TZ
+              value: Europe/Berlin
             - name: CONFIG_PATH
               value: /etc/authority/config/config.json
           volumeMounts:
