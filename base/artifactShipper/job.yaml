@@ -22,10 +22,15 @@ spec:
           volumeMounts:
             - name: artifact-shipper-config
               mountPath: /config
+            - name: tmpdir
+              mountPath: /tmp
       volumes:
         - name: artifact-shipper-config
           configMap:
             name: artifact-shipper-config
+        - name: tmpdir
+          emptyDir:
+            sizeLimit: 5000Mi
       restartPolicy: Never
       imagePullSecrets:
         - name: regcred
