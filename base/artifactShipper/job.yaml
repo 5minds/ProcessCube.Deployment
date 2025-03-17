@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: artifactshipper
-          image: 5minds/processcube_artifact_shipper:1.0.0-renovate-cd1e08-m46rx4vj
+          image: ghcr.io/5minds/processcube_artifact_shipper:1.1.0
           imagePullPolicy: IfNotPresent
           env:
             - name: credentials__git__token

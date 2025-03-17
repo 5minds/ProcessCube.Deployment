@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: engine-container
-          image: 5minds/engine:18.1.0-extensions-1.3.0
+          image: ghcr.io/5minds/processcube_engine:18.4.1-extensions-2.0.0
           ports:
             - containerPort: 10560
           env:
