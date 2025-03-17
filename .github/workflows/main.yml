@@ -3,17 +3,16 @@ name: Build
 on:
   push:
     branches:
-      - '*'
-      - '*/*'
+      - 'main'
 env:
-  CI_TOOLS_VERSION: '^4.2.0'
+  CI_TOOLS_VERSION: '^5.0.0'
   # NOTE: Um den Releasezyklus von Alpha nach Beta zu ändern, einfach die nachfolgend deklarierten Env Variablen switchen.
   CI_TOOLS_ALPHA_BRANCH: next
   CI_TOOLS_ALPHA_NPM_TAG: next
-  CI_TOOLS_STABLE_BRANCH: main
   # CI_TOOLS_BETA_BRANCH: next
   # CI_TOOLS_BETA_NPM_TAG: next
-  #BOX_RELEASE_TAG: 2024-1
+  BOX_RELEASE_TAG: 2025-1
+
 jobs:
   build_version:
     runs-on: [ubuntu-latest]
@@ -38,9 +37,9 @@ jobs:
       - name: 'Prepare Version'
         if: "!startsWith(github.ref_name, 'renovate')"
         run: ci_tools prepare-version --allow-dirty-workdir
-            
+
       - name: Commit & Tag Version
-        run: | 
+        run: |
           ci_tools commit-and-tag-version --only-on-primary-branches
           ci_tools update-github-release --only-on-primary-branches --use-title-and-text-from-git-tag
         env:
