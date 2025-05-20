@@ -40,3 +40,5 @@ spec:
               value: "10560"
             - name: NODE_OPTIONS
               value: "--max-old-space-size=4096"
+      imagePullSecrets:
+        - name: regcred
