@@ -38,3 +38,5 @@ spec:
         - name: config
           configMap:
             name: authority-config
+      imagePullSecrets:
+        - name: regcred
