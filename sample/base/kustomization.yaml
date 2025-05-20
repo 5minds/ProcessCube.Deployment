@@ -15,4 +15,4 @@ images:
   - name: ghcr.io/5minds/processcube_lowcode
     newTag: 6.1.1
   - name: postgres
-    newTag: 17
+    newTag: "17"
