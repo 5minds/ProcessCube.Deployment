@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: processcube-sample-app
 
 resources:
-  - https://github.com/5minds/ProcessCube.Deployment//base/?ref=main
+  - https://github.com/5minds/ProcessCube.Deployment//base/?ref=v1.8.0
   - namespace.yaml
 
 images:
