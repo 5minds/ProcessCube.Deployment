@@ -6,3 +6,13 @@ namespace: processcube-sample-app
 resources:
   - https://github.com/5minds/ProcessCube.Deployment//base/?ref=main
   - namespace.yaml
+
+images:
+  - name: ghcr.io/5minds/processcube_authority
+    newTag: 3.2.0
+  - name: ghcr.io/5minds/processcube_engine
+    newTag: 19.0.0-extensions-2.3.0
+  - name: ghcr.io/5minds/processcube_lowcode
+    newTag: 6.1.1
+  - name: postgres
+    newTag: 17
